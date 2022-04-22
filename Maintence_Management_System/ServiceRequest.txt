@@ -1,0 +1,3 @@
+{customerName:Naruto Uzamaki, Responding Employee:Saturo Gojo,Issue Addres:897 leaf street Sewell nj,Date of Issue:  3 March 2022,Type Of Issue:(structural), Problem:|roof is showing early signs of re-roofing|,Status of Issue:[resolved] , Case ID:<S45678>.}
+{customerName:Dick Grayson, Responding Employee:John Doe ,Issue Addres: 643 robin lane,Date of Issue:  13 April 2022,Type Of Issue:(plumbing), Problem:|unidentifiable object lodged in one of the pipes|,Status of Issue:[Resolved] , Case ID:<S12345>.}
+{customerName:Jane Doe, Responding Employee:Bruce Wayne,Issue Addres:423 blank street Arkham NY ,Date of Issue:  2/11/2022,Type Of Issue:(hvac), Problem:|Bats crawled in the customers vents|,Status of Issue:[Open] , Case ID:<S09876>.}

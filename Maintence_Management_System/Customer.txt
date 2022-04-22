@@ -1,0 +1,5 @@
+{Name: Jane Doe,Email:  JaneD243@gmail.com,Phone number:  856-087-2345,Address:[423 blank street Arkham NY],Customer ID:<C1234>.}
+{Name: Dick Grayson,Email:  nightwing22@gmail.com,Phone number:  609-234-5643,Address:[643 robin lane clayton nj],Customer ID:<C5673>.}
+{Name: Naruto Uzamaki,Email: kurama09@gmail.com,Phone number: 908-345-2222,Address:[897 leaf street Sewell nj],Customer ID:<C4564>.}
+{Name:jim kim,Email:jimkim@gmail.com,Phone number:6540982345,Address:[432 jennifer ave],Customer ID:<C2345>.}
+{Name:jim dan,Email:dan@gmail.com,Phone number:8763450987,Address:[789 murky lane],Customer ID:<C234>.}
