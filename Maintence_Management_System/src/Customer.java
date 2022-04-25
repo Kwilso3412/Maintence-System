@@ -1,7 +1,6 @@
 
 public class Customer {
-	//created by Kahlyll Wilson
-	
+
 	private String name;
 	private String email;
 	private String phonenumber;
