@@ -1,5 +1,4 @@
 
-//Created by Issaiah Graves
 
 public class serviceRequest {
 	
@@ -32,7 +31,7 @@ public class serviceRequest {
 		typeOfIssue = type;
 		
 	}
-public void resetFactory(){
+	public void resetFactory(){
 		
 		customerName = "Empty Case";
 		respondingEmployee = "N/A";
