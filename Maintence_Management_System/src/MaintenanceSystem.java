@@ -6,13 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 public class MaintenanceSystem {
-	//Created by Kahlyll & Isaiah Graves
 	//initializes the PrintWriters and scanner 
 	PrintWriter outputFile = null;
 	File clearFile = null;
 	Scanner inputFile = null;
 
-	//created by Kahlyll
 	//finds the employee using the username and password
 	public MaintenanceEmployee employeeLogin (ArrayList<MaintenanceEmployee> searchEmployee, MaintenanceEmployee newEmployee, String userName, String password)
 	{
@@ -29,7 +27,6 @@ public class MaintenanceSystem {
 		return null;
 	}
 	
-	//created by Isaiah
 	//finds request based on if they are open or closed
 	public serviceRequest  findRequest (ArrayList<serviceRequest> searchRequest,serviceRequest foundRequest,  String Type)
 	{
@@ -46,7 +43,6 @@ public class MaintenanceSystem {
 		
 	}
 	
-	//created by Kahlyll
 	//finds the case id of the request you are looking for
 	public serviceRequest  findCaseID (ArrayList<serviceRequest> searchRequest,serviceRequest modifyRequest,  String caseID)
 	{
@@ -62,7 +58,6 @@ public class MaintenanceSystem {
 		
 	}
 
-	//created by Isaiah
 	//Searches the text file and stores it in the arrayList 
 	public void loadEmployee (ArrayList<MaintenanceEmployee> loadEmployee) throws FileNotFoundException 
 	{
@@ -152,7 +147,6 @@ public class MaintenanceSystem {
 	}
 	
 	
-	//Created by Kahlyll
 	//Searches the text file and stores it in the arrayList 
 	public void exportEmployee (ArrayList<MaintenanceEmployee> newEmployee) throws IOException 
 	{
