@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class MaintenenceManagement {
 	
-	//Created by Kahlyll & Isaiah
-	
 	public static void main(String[] args) throws IOException {
 		Scanner userInput = new Scanner(System.in);
 		char response;		//gathers the initial response
@@ -63,60 +61,60 @@ public class MaintenenceManagement {
 
 		//the main program 
 			do { 
-			userInput.nextLine();
-			System.out.println("What would you like to do?");
-			//The main menu of the program
-			System.out.println("A. Create a new service request");
-	        System.out.println("B. modify current service requests");
-	        System.out.println("C. Veiw all service requests");
-	        System.out.println("D. Exit \n");
-	        response = userInput.next().charAt(0);
-			exitKey = "Y";
-	        option = Character.toUpperCase(response);
+				userInput.nextLine();
+				System.out.println("What would you like to do?");
+				//The main menu of the program
+				System.out.println("A. Create a new service request");
+				System.out.println("B. modify current service requests");
+				System.out.println("C. Veiw all service requests");
+				System.out.println("D. Exit \n");
+				response = userInput.next().charAt(0);
+					exitKey = "Y";
+				option = Character.toUpperCase(response);
 		      
-	        switch (option) {
-			//Allows the user to create a Service request 
-			case 'A':
-				//Creates the customer making the request
-				System.out.println("Please enter the new customers first name : ");	
-				answer = userInput.next();
-				String firstName = answer;
-				
-				System.out.println("Please enter the new customers last name: ");	
-				answer = userInput.next();
-				String lastName = answer;
-				
-				String fullName = firstName +" " + lastName;
-				newCustomer.setName(fullName);
-				
-				System.out.println("Please enter the customers email: ");
-				answer = userInput.next();
-				newCustomer.setEmail(answer);
+			switch (option) {
+				//Allows the user to create a Service request 
+				case 'A':
+					//Creates the customer making the request
+					System.out.println("Please enter the new customers first name : ");	
+					answer = userInput.next();
+					String firstName = answer;
 
-				System.out.println("Please enter the customers phone number: ");
-				answer = userInput.next();
-				newCustomer.setPhoneNumber(answer);
-				
-				System.out.println("Please enter the the customers address: ");
-				answer = userInput.nextLine();
-				answer = userInput.nextLine();
-				newCustomer.setAddress(answer);
-				
-				System.out.println("Please create a four number Customer ID starting with (C): ");
-				answer = userInput.next();
-				newCustomer.setId(answer);
-				
-				System.out.println("This is the new customer: \n" + newCustomer.toString() + "\n");
+					System.out.println("Please enter the new customers last name: ");	
+					answer = userInput.next();
+					String lastName = answer;
 
-				newRequest.setCustomerName(newCustomer.getName());
-				newRequest.setIssueAddress(newCustomer.getAddress());
-				
-				//Adds new customer to the customers arrayList 
-				customerWorkingList.add(newCustomer);
-				
-				//begins to gather information about the service required
-				System.out.println("What type of issue is the customer experiencing?(Plumbing, Electrical, HVAC, Structural, General Issue)");
-				answer = userInput.next();
+					String fullName = firstName +" " + lastName;
+					newCustomer.setName(fullName);
+
+					System.out.println("Please enter the customers email: ");
+					answer = userInput.next();
+					newCustomer.setEmail(answer);
+
+					System.out.println("Please enter the customers phone number: ");
+					answer = userInput.next();
+					newCustomer.setPhoneNumber(answer);
+
+					System.out.println("Please enter the the customers address: ");
+					answer = userInput.nextLine();
+					answer = userInput.nextLine();
+					newCustomer.setAddress(answer);
+
+					System.out.println("Please create a four number Customer ID starting with (C): ");
+					answer = userInput.next();
+					newCustomer.setId(answer);
+
+					System.out.println("This is the new customer: \n" + newCustomer.toString() + "\n");
+
+					newRequest.setCustomerName(newCustomer.getName());
+					newRequest.setIssueAddress(newCustomer.getAddress());
+
+					//Adds new customer to the customers arrayList 
+					customerWorkingList.add(newCustomer);
+
+					//begins to gather information about the service required
+					System.out.println("What type of issue is the customer experiencing?(Plumbing, Electrical, HVAC, Structural, General Issue)");
+					answer = userInput.next();
 							
 					do{
 						if (answer.contains("Plumbing") || answer.contains("plumbing")){
@@ -143,27 +141,27 @@ public class MaintenenceManagement {
 					}while(answer == "");
 					newRequest.setTypeOfIssue(answer);	//Verifies that an answer is given
 					userInput.nextLine();	//DO NOT REMOVE - Necessary for nextLine to function properly
-			
-				System.out.println("Please give a brief description of what issues you are experiencing: ");
-				answer = userInput.nextLine();
-				newRequest.setDescOfIssue(answer);
-		
-				System.out.println("What is todays Date: ");
-				answer = userInput.nextLine();
-				newRequest.setDateOfIssue(answer);
-	
-				System.out.println("Create create 4 number ID starting with (S): ");
-				answer = userInput.nextLine();
-				newRequest.setCaseID(answer);
-				
-				
-				System.out.println("Your response has been recorded.");
-				newRequest.setEmployeeName(workingEmployee.getName()); //takes the employee that logged in and stores it as the responding employee
-				newRequest.setStatus("open"); 
-				requestWorkingList.add(newRequest);
-				System.out.println("Here is the new service request \n" + newRequest.toString());
-				System.out.println("Press enter to continue to the main menu...");
-				break;
+
+					System.out.println("Please give a brief description of what issues you are experiencing: ");
+					answer = userInput.nextLine();
+					newRequest.setDescOfIssue(answer);
+
+					System.out.println("What is todays Date: ");
+					answer = userInput.nextLine();
+					newRequest.setDateOfIssue(answer);
+
+					System.out.println("Create create 4 number ID starting with (S): ");
+					answer = userInput.nextLine();
+					newRequest.setCaseID(answer);
+
+
+					System.out.println("Your response has been recorded.");
+					newRequest.setEmployeeName(workingEmployee.getName()); //takes the employee that logged in and stores it as the responding employee
+					newRequest.setStatus("open"); 
+					requestWorkingList.add(newRequest);
+					System.out.println("Here is the new service request \n" + newRequest.toString());
+					System.out.println("Press enter to continue to the main menu...");
+					break;
 	        	
 				//Allows user to change, view or delete a request 	
 				case 'B':
@@ -180,13 +178,7 @@ public class MaintenenceManagement {
 					//Prompts the user for the id they want to modify
 					System.out.println("Please type the case Id you want to modify.");
 					answer = userInput.next();
-					
-					//checks if the answer is correct
-					
-					
-					
-					
-					
+
 					//finds the service request to modify
 					modifiedRequest.setCaseID(answer);
 					deleteRequest.setCaseID(answer);
@@ -237,9 +229,9 @@ public class MaintenenceManagement {
 										System.out.println("Please enter the correct case id \n");
 										continue;
 									}
-						}
+								}
 							}while(modifiedRequest == null);
-					}
+						}
 					
 					else {
 						System.out.println("Please enter the correct case id \n");
@@ -254,48 +246,47 @@ public class MaintenenceManagement {
 					serviceRequest searchingRequest = new serviceRequest();
 					
 					System.out.println("1. Veiw all of one request type");
-			        System.out.println("2. Veiw all request types");
-			        System.out.println("3. Main menu \n");
-				    nextResponse = userInput.nextInt();
+					System.out.println("2. Veiw all request types");
+					System.out.println("3. Main menu \n");
+				    	nextResponse = userInput.nextInt();
 		 
-						switch(nextResponse) {
-							//allows the user to pick a specific type of request
-							case 1:
-							System.out.println("Which request type would you like to view?");
-							System.out.println("1. Plumbing Requests");
-							System.out.println("2. Electrical Requests");
-							System.out.println("3. HVAC Requests");
-							System.out.println("4. Structural Requests");
-							System.out.println("5. General Requests");
-							finalResponse = userInput.nextInt();
-							//need to fix the bug where if the correct response is not entered it will reject
-							if(finalResponse == 1) {
-								//searches the large array list 
-								searchingRequest = (database).findRequest(requestWorkingList, searchingRequest, "plumbing");
-								
-								//Prints out the items if they are found
-								ArrayList<serviceRequest> newRequestList = new ArrayList<serviceRequest>();
-								
-								if (searchingRequest== null) {
-									System.out.println("There are no plumbing request \n");
-									break;
-								}
-								else {
-									newRequestList.add(searchingRequest);
-									
-									for(serviceRequest request : newRequestList) {
-										
-										System.out.println("Customer's name: " + request.getCustomerName());
-										System.out.println("Date of iss was created: " + request.getDateOfIssue());
-										System.out.println("Status: " + request.getStatus());
-										System.out.println("Problem: " + request.getDescOfIssue());
-										System.out.println("Address: " + request.getIssueAddress());
-										System.out.println("Responding Employee: " + request.getEmployeeName());
-										System.out.println("Case Id: " + request.getCaseID() + "\n");
+					switch(nextResponse) {
+						//allows the user to pick a specific type of request
+						case 1:
+						System.out.println("Which request type would you like to view?");
+						System.out.println("1. Plumbing Requests");
+						System.out.println("2. Electrical Requests");
+						System.out.println("3. HVAC Requests");
+						System.out.println("4. Structural Requests");
+						System.out.println("5. General Requests");
+						finalResponse = userInput.nextInt();
+						//need to fix the bug where if the correct response is not entered it will reject
+						if(finalResponse == 1) {
+							//searches the large array list 
+							searchingRequest = (database).findRequest(requestWorkingList, searchingRequest, "plumbing");
 
-										}
+							//Prints out the items if they are found
+							ArrayList<serviceRequest> newRequestList = new ArrayList<serviceRequest>();
+
+							if (searchingRequest== null) {
+								System.out.println("There are no plumbing request \n");
+								break;
+							}
+							else {
+								newRequestList.add(searchingRequest);
+
+								for(serviceRequest request : newRequestList) {
+
+									System.out.println("Customer's name: " + request.getCustomerName());
+									System.out.println("Date of iss was created: " + request.getDateOfIssue());
+									System.out.println("Status: " + request.getStatus());
+									System.out.println("Problem: " + request.getDescOfIssue());
+									System.out.println("Address: " + request.getIssueAddress());
+									System.out.println("Responding Employee: " + request.getEmployeeName());
+									System.out.println("Case Id: " + request.getCaseID() + "\n");
+
+									}
 								}
-								
 							}
 							
 							else if(finalResponse == 2) {
@@ -321,9 +312,8 @@ public class MaintenenceManagement {
 										System.out.println("Responding Employee: " + request.getEmployeeName());
 										System.out.println("Case Id: " + request.getCaseID() + "\n");
 
-										}
+									}
 								}
-								
 							}
 							
 							else if(finalResponse == 3) {
@@ -437,7 +427,7 @@ public class MaintenenceManagement {
 						        System.out.println("3. Main menu \n");
 						        nextResponse = userInput.nextInt();
 							}
-		    	break;
+		    			break;
 				
 		    	//ends the program
 				case 'D':
@@ -453,11 +443,11 @@ public class MaintenenceManagement {
 		        	
 		        	//Prompts user for the correct response
 		    		System.out.println("A. Create a new service request");
-		            System.out.println("B. modify current service requests");
-		            System.out.println("C. Veiw all service requests");
-		            System.out.println("D. Exit \n");
-		            response = userInput.next().charAt(0);
-		            option = Character.toUpperCase(response);
+			    System.out.println("B. modify current service requests");
+			    System.out.println("C. Veiw all service requests");
+			    System.out.println("D. Exit \n");
+			    response = userInput.next().charAt(0);
+			    option = Character.toUpperCase(response);
 				}
 			}while((exitKey != "D") || (exitKey != "D"));
 			
